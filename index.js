@@ -195,6 +195,22 @@ return acc + elemento
 
 console.log(suma)
 
+const separandoPares = (array)=>{
+    return  numeros.filter ((elemento)=>{
+      return elemento % 2 === 0
+    })
+}
+
+//Mumuki///
+const sumatoria = (array)=>{
+    return array.reduce ((acc,elemento)=>{
+        return acc + elemento
+    }, 0)
+}
+
+console.log(sumatoria(numbers))
+
+
 /*2
 Tenemos un array llamado numbers con números enteros al azar.
 Utilizando reduce, queremos calcular la multiplicación de todos los números que están en el array.
@@ -209,8 +225,16 @@ const numbers = [6, 1, 34, 94, 3, 17];
 const multiplicacion = numbers.reduce((acc,elemento)=>{
 return acc * elemento
 })
-
 console.log(multiplicacion)
+
+// mumuki ///
+const productoria = (array)=>{
+return array.reduce((acc,elemento)=>{
+    return acc * elemento
+})
+}
+
+console.log(productoria(numbers))
 
 /*3
 Tenemos un array llamado notasDeTPs con números del 1 al 10, que representan las notas de los distintos trabajos prácticos 
@@ -226,10 +250,28 @@ const notasDeTPs = [4, 7, 8, 5, 10];
 
 const notasDeTPs = [4, 7, 8, 5, 10];
 
-const promedio = notasDeTPs.reduce((acc,elemento)=>{
-    return acc + (elemento/ notasDeTPs.length)
-},0)
-console.log(promedio)
+// const promedio = notasDeTPs.reduce((acc,elemento)=>{
+//     return acc + (elemento/ notasDeTPs.length)
+// },0)
+// console.log(promedio)
+
+const promedio = (notas) =>{
+    const promedio = notas.reduce((acc,elemento)=>{
+      return acc + elemento
+    },0)
+    return promedio/notas.length
+ }
+ console.log(promedio(notasDeTPs))
+
+///Mumuki////
+/*const promedio = (array)=>{
+    const resultado = array.reduce((acc,elemento,index,array)=>{
+        return acc + (elemento/array.length)
+    },0)
+    return resultado
+}
+
+console.log(promedio(notasDeTPs))
 
 /*4
 Tenemos un array en una variable libros con libros para leer sobre Javascript.
@@ -270,6 +312,14 @@ console.log(listaDeLibros)
 
 listaHtml.innerHTML = listaDeLibros
 
+///Mumuki///
+const enlistar = (array) =>{
+    return array.reduce((acc,elemento)=>{
+        return acc + `<li>${elemento}</li>`
+    },"")
+}
+
+console.log(enlistar(librosDeJS))
 /*5
 Tenemos un array de objetos llamado personas con personas y edades .
 
@@ -309,6 +359,14 @@ const sumaEdades = personas.reduce((acc,elemento)=>{
 
 console.log(sumaEdades)
 
+///Mumuki ///
+const sumaDeEdades = (array) =>{
+    return array.reduce((acc,elemento)=>{
+        return acc + elemento.edad
+    },0)
+}
+console.log(sumaDeEdades(personas))
+
 /*integrador de todos los metodos
 Tenemos un array en una variable datos con números al azar, que pueden ser tanto positivos como negativos
 Queremos eliminar todos los números negativos
@@ -341,3 +399,24 @@ const sumaDeTodos = dobles.reduce((acc,elemento)=>{
 
 console.log(sumaDeTodos) //26
 
+
+//Mumuki///
+
+
+const sumaDeLosDoblesPositivos = (array) => {
+    const positivos = datos.filter((elemento)=>{
+        if(elemento > 0)
+        return elemento
+    })
+    
+    const dobles = positivos.map((elemento)=>{
+        return elemento*2
+    })
+
+    const sumaDeTodos = dobles.reduce((acc,elemento)=>{
+        return acc + elemento
+    },0)
+    return sumaDeTodos
+}
+
+console.log(sumaDeLosDoblesPositivos(datos))
