@@ -187,7 +187,7 @@ const numbers = [6, 1, 34, 94, 3, 17];
 
 // deberia mostrar 155*/
 
-const numbers = [6, 1, 34, 94, 3, 17];
+/*const numbers = [6, 1, 34, 94, 3, 17];
 
 const suma = numbers.reduce((acc,elemento)=>{
 return acc + elemento
@@ -208,7 +208,7 @@ const sumatoria = (array)=>{
     }, 0)
 }
 
-console.log(sumatoria(numbers))
+console.log(sumatoria(numbers))*/
 
 
 /*2
@@ -221,7 +221,7 @@ const numbers = [6, 1, 34, 94, 3, 17];
 // deberia mostrar 977976*/
 
 
-
+/*
 const multiplicacion = numbers.reduce((acc,elemento)=>{
 return acc * elemento
 })
@@ -234,7 +234,7 @@ return array.reduce((acc,elemento)=>{
 })
 }
 
-console.log(productoria(numbers))
+console.log(productoria(numbers))*/
 
 /*3
 Tenemos un array llamado notasDeTPs con números del 1 al 10, que representan las notas de los distintos trabajos prácticos 
@@ -248,20 +248,20 @@ const notasDeTPs = [4, 7, 8, 5, 10];
 
 // deberia mostrar 6.8*/
 
-const notasDeTPs = [4, 7, 8, 5, 10];
+//const notasDeTPs = [4, 7, 8, 5, 10];
 
 // const promedio = notasDeTPs.reduce((acc,elemento)=>{
 //     return acc + (elemento/ notasDeTPs.length)
 // },0)
 // console.log(promedio)
-
+/*
 const promedio = (notas) =>{
     const promedio = notas.reduce((acc,elemento)=>{
       return acc + elemento
     },0)
     return promedio/notas.length
  }
- console.log(promedio(notasDeTPs))
+ console.log(promedio(notasDeTPs))*/
 
 ///Mumuki////
 /*const promedio = (array)=>{
@@ -340,7 +340,7 @@ const personas = [
 // codea debajo de este comentario la solucion al ejercicio
 
 // deberia mostrar 59
-*/
+
 const personas = [
     {nombre: "Grace", 
     edad: 6
@@ -365,7 +365,7 @@ const sumaDeEdades = (array) =>{
         return acc + elemento.edad
     },0)
 }
-console.log(sumaDeEdades(personas))
+console.log(sumaDeEdades(personas))*/
 
 /*integrador de todos los metodos
 Tenemos un array en una variable datos con números al azar, que pueden ser tanto positivos como negativos
@@ -377,7 +377,7 @@ const datos = [2, -4, 6, 0, 5, -1];
 
 // codear acá la solución del ejercicio
 const total = ;*/
-
+/*
 const datos = [2, -4, 6, 0, 5, -1];
 
 
@@ -397,11 +397,11 @@ const sumaDeTodos = dobles.reduce((acc,elemento)=>{
     return acc + elemento
 },0)
 
-console.log(sumaDeTodos) //26
+console.log(sumaDeTodos) //26*/
 
 
 //Mumuki///
-
+/*
 
 const sumaDeLosDoblesPositivos = (array) => {
     const positivos = datos.filter((elemento)=>{
@@ -419,4 +419,175 @@ const sumaDeLosDoblesPositivos = (array) => {
     return sumaDeTodos
 }
 
-console.log(sumaDeLosDoblesPositivos(datos))
+console.log(sumaDeLosDoblesPositivos(datos))*/
+
+// map 
+// recorre un array
+// ejecuta una funcion por cada elemento del array 
+// la funcion va a recibir como parametro 
+// cada uno de los elementos del array
+
+// map retorna un array nuevo 
+// a partir de las cosas que se retornan en la funcion 
+
+/*Map 1
+Tenemos un array en una variable numeros con números al azar.
+Usá la función map para crear un nuevo array incrementando cada valor del array en 10, y guardarlo en 
+la variable numerosMasDiez
+Mostrar por consola el array original y el nuevo*/
+
+const numeros = [1, 2, 3, 4, 5];
+
+let numerosMasDiez = numeros.map(numero=>{
+    return numero + 10
+})
+
+
+console.log(numeros); // [1, 2, 3, 4, 5]
+console.log(numerosMasDiez); // [11, 12, 13, 14, 15]
+
+/*Tenemos un array en una variable numeros con números al azar.
+Usar la función map para crear un nuevo array multiplicando cada valor del array 
+por 2, y guardarlo en la variable dobles
+Mostrar por consola el array original y el nuevo*/
+
+const numeros2 = [3, 7, 13, 99];
+
+let dobles2 = numeros2.map(numero => {
+    return numero * 2
+})
+
+console.log(numeros2); // [3, 7, 13, 99]
+console.log(dobles2); // [6, 14, 26, 198]
+
+/*3 Tenemos un array en una variable frases con frases al azar.
+Usar la función map para crear un nuevo array donde cada frase empiece y termine 
+con signo de exclamación.
+Mostrar por consola el array original y el nuevo*/
+/*const frases = ['Labore sea dolor.', 'Justo rebum dolor.', 'Stet lorem amet.'];
+
+let frasesExclamadas = frases.map(elemento => {
+    return `¡${elemento}!`
+})
+
+
+console.log(frases); // ['Labore sea dolor.', 'Justo rebum dolor.', 'Stet lorem amet.']
+console.log(frasesExclamadas); // [ '¡Labore sea dolor.!', '¡Justo rebum dolor.!', '¡Stet lorem amet.!' ]*/
+
+/* 4 Tenemos un array en una variable libros con libros para leer sobre Javascript.
+Usar la función map para crear un nuevo array donde cada titulo de los libros esté encerrado en una etiqueta 
+<li></li>.
+Mostrar por consola el array nuevo, encerrándolo entre <ul></ul>*/
+const librosDeJS2 = [
+  'JavaScript for Kids: A Playful Introduction to Programming',
+  'Composing Software',
+  'Eloquent JavaScript: A Modern Introduction to Programming',
+  'JavaScript: The Good Parts',
+  'Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Moderns JS Libraries',
+  'Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript',
+  'JavaScript: The Definitive Guide',
+  'You Don’t Know JS',
+  'JavaScript Allongé: The Six Edition'
+];
+
+// codear acá la solución del ejercicio
+let listadoDeLisbros = librosDeJS2.map(libro => {
+    return `<ul> ${libro} </ul>`
+})
+console.log(listaDeLibros)
+// el resultado final debería ser
+// <ul><li>JavaScript for Kids: A Playful Introduction to Programming</li><li>Composing Software</li><li>Eloquent JavaScript: A Modern Introduction to Programming</li><li>JavaScript: The Good Parts</li><li>Programming JavaScript Applications: Robust Web Architecture with Node, HTML5, and Moderns JS Libraries</li><li>Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript</li><li>JavaScript: The Definitive Guide</li><li>You Don’t Know JS</li><li>JavaScript Allongé: The Six Edition</li></ul>
+
+/*Tenemos un array en una variable frases con frases al azar.
+Usar la función map para crear un nuevo array que contenga la longitud de cada frase.
+Mostrar por consola el array original y el nuevo.
+
+const frases2 = ['Labore sea dolor.', 'Justo rebum dolor.', 'Stet lorem amet.'];
+
+let longitudes = frases2.map(elemento =>{
+    return elemento.length
+})
+
+console.log(frases2); // ['Labore sea dolor.', 'Justo rebum dolor.', 'Stet lorem amet.']
+console.log(longitudes); // [ 17, 18, 16 ]*/
+
+/*Tenemos un array en una variable playlist con una lista de canciones de un disco.
+Usar la función map para agregar a cada título de la canción el número de posición en la que 
+está dentro del array.*/
+const playlist = ['Everlong', 'The Pretender', 'Learn to Fly'];
+
+let listaDePlaylist = playlist.map((elemento, index) =>{
+    return `${index} - ${elemento}` 
+})
+
+console.log(listaDePlaylist)
+// RESULTADO ESPERADO
+// [ '0 - Everlong', '1 - The Pretender', '2 - Learn to Fly' ]
+
+/*7
+Tenemos un array en una variable costos con números que representan costos de diferentes productos.
+Completar el siguiente código para llegar al resultado esperado
+A un costo primero se le agrega la ganancia y después el IVA (este ultimo sobre el costo + la ganancia)*/
+
+// const costos = [ 12.5, 56, 98, 45.75 ];
+
+// const agregarIVA = (costo) => {
+//   return costo * 1.21;
+// }
+
+// const sumarGanancia = (costo) => {
+//   return costo * 1.5;
+// }
+
+// let resultado = costos.map((costo)=>{
+//    return (costo * 1.5) * 1.21
+    
+// })
+
+// console.log(resultado)
+// // deberia mostrar
+// [ 22.6875, 101.64, 177.87, 83.03625 ]
+/*
+Tenemos un array en una variable costos con números que representan costos de diferentes productos.
+También tenemos un array en una variable productos con los nombres de cada producto.
+Completar el siguiente código para llegar al resultado esperado
+A un costo primero se le agrega la ganancia y después el IVA
+El nombre de un producto en una posición, se corresponde con el precio que está en la misma posición. 
+Por ejemplo: el producto que está en la posición 1 tiene un costo igual al elemento en la posición 1 del 
+array costos*/
+
+const productos = [ 'celular', 'notebook', 'monitor' ];
+const costos = [ 12.5, 56, 98 ];
+
+
+const agregarIVA = (costo) => {
+  return costo * 1.21;
+}
+
+const sumarGanancia = (costo) => {
+  return costo * 1.5;
+}
+
+let resultado = costos.map((costo)=>{
+    return (costo * 1.5) * 1.21
+     
+ })
+const corresponder = (costos, productos) =>{
+    const precios = resultado
+    const arrayFinal = precios.map((elemento, index) => {
+    return `${productos[index]} ${precios[index]}`  
+   })
+   return arrayFinal
+  }
+
+console.log(corresponder(costos,productos))
+
+// deberia mostrar
+// [ "celular 22.6875", "notebook 101.64", "monitor 177.87" ]
+
+// filter 
+// a partir de un array, me quedo con ALGUNOS elementos
+// que cumplen una condicion
+// en el filter
+// hacemos un array con todos los elementos que respondan TRUE
+// a lo que estamos retornando 
